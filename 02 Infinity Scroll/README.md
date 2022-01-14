@@ -1,4 +1,5 @@
-# JS projects 02 Infinity Scroll
+### DEMO page
+https://elenachien1993.github.io/JS-20Projects/02%20Infinity%20Scroll/
 
 ## 目標
 
