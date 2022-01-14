@@ -1,4 +1,6 @@
 # JS projects 06 Animated Theme
+### DEMO page
+https://elenachien1993.github.io/JS-20Projects/06-animated-template/
 
 ## 目標
 
