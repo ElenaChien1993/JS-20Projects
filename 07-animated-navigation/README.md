@@ -1,4 +1,6 @@
 # JS projects 07 Animated Navigation
+### DEMO page
+https://elenachien1993.github.io/JS-20Projects/07-animated-navigation/
 
 ## 目標
 
