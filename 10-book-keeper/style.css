@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans&display=swap');
+
+/* --- CSS Variables ---*/
+:root {
+  --primary-color: #772c18;
+  --secondary-color: #f7aa7b;
+  --border-radius: 5px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f7aa7b' fill-opacity='0.13'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: 'Acme', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+  margin: 20px auto 10px;
+  width: 275px;
+  border-radius: var(--border-radius);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+h1:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* --- bookmarks --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 10px;
+  border-radius: var(--border-radius);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:link, 
+a:visited {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.fa-times {
+  float: right;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.name {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.name img {
+  height: 20px;
+  width: 20px;
+  text-align: sub;
+  margin-right: 5px;
+}
+
+/* --- Modal --- */
+.modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  max-width: 95%;
+  width: 500px;
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.close-icon {
+  position: relative;
+  top: 13px;
+  right: 13px;
+  font-size: 24px;
+  color: white;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 20px;
+  background: whitesmoke;
+}
+
+/* --- Form --- */
+.form-group {
+  height: 55px;
+}
+
+.form-input {
+  width: 97%;
+  padding: 5px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  display: block;
+  outline: none;
+}
+
+.form-label {
+  color: var(--primary-color);
+  display: block;
+}
+
+button {
+  margin-top: 10px;
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: none;
+  height: 30px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Media Query for Large Screen */
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
